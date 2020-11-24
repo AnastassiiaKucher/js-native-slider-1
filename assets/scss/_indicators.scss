@@ -1,0 +1,40 @@
+.indicators {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+
+  list-style: none;
+
+  @include sm-min {
+    width: 97%;
+  }
+
+  @include sm {
+    width: 85%;
+  }
+}
+
+.indicator {
+  width: 20px;
+  height: 20px;
+  margin: -40px 7.5px 0;
+
+  border: 3px solid rgba($color-light, 0.4);
+  border-radius: 50%;
+
+  @include lg-min {
+    cursor: pointer;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active {
+    border-color: $color-light;
+    box-shadow: 0 0 10px $color-light;
+  }
+}
